@@ -1,0 +1,88 @@
+{
+  "projectName": "SCADA Industrial Control System",
+  "version": "1.0.0",
+  "description": "تطبيق متقدم للتحكم الصناعي SCADA",
+  "components": {
+    "backend": {
+      "framework": "Node.js + Express",
+      "language": "TypeScript",
+      "port": 3000,
+      "websocket": 8080,
+      "database": "SQLite3"
+    },
+    "frontend": {
+      "web": {
+        "framework": "React",
+        "language": "TypeScript",
+        "port": 3000,
+        "ui": "Tailwind CSS"
+      },
+      "mobile": {
+        "framework": "Flutter",
+        "language": "Dart",
+        "platform": "Android/iOS"
+      }
+    }
+  },
+  "screens": [
+    {
+      "id": 1,
+      "name": "واجهة الاتصال",
+      "description": "الاتصال بـ PLC والتحقق من الحالة",
+      "components": ["Connection Status", "LED Indicator", "Protocol Selector"]
+    },
+    {
+      "id": 2,
+      "name": "واجهة الخلاطات",
+      "description": "التحكم في الخلاطات السائلة",
+      "devices": ["Mixer 1 (2.5kW)", "Mixer 2 (2.5kW)"],
+      "controls": ["Start/Stop", "Speed Control", "Temperature Monitor"]
+    },
+    {
+      "id": 3,
+      "name": "واجهة المبلور",
+      "description": "التحكم في المبلور والحاقن",
+      "devices": ["Crystallizer", "Injector"],
+      "sensors": 5
+    },
+    {
+      "id": 4,
+      "name": "واجهة خزانات المبلور",
+      "description": "التحكم في حرارة الخزانات",
+      "tanks": 5,
+      "pumps": 5
+    },
+    {
+      "id": 5,
+      "name": "واجهة السنترفيوز",
+      "description": "التحكم في الدينمو والمحركات",
+      "motors": 3
+    },
+    {
+      "id": 6,
+      "name": "واجهة التبريد والمكابس",
+      "description": "التحكم في الشيلر والمكابس",
+      "compressors": 2
+    },
+    {
+      "id": 7,
+      "name": "واجهة البيانات",
+      "description": "الرسوم البيانية والتقارير",
+      "charts": ["Line Charts", "Real-time Graphs"],
+      "exports": ["PDF", "Word", "Excel"]
+    },
+    {
+      "id": 8,
+      "name": "واجهة الإعدادات",
+      "description": "الضبط والمعايرة",
+      "settings": ["Language", "Date/Time", "Calibration", "Background", "Colors"]
+    }
+  ],
+  "features": {
+    "resumeSystem": "استئناف تلقائي بعد التوقف",
+    "multiLanguage": "العربية والإنجليزية",
+    "realTime": "اتصال مباشر مع PLC",
+    "reporting": "تقارير مفصلة وشاملة",
+    "calibration": "معايرة دقيقة للأجهزة"
+  }
+}
